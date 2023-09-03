@@ -10,3 +10,11 @@ class RedisClient {
     this.client.on('error', (err) => {
       console.error('Redis Error:', err);
     })
+
+    // check connection status and report
+  isAlive() {
+    if (this.client.connected) {
+      return true;
+    }
+    return false;
+  }
