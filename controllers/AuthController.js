@@ -1,12 +1,11 @@
 import { ObjectID } from 'mongodb';
 import sha1 from 'sha1';
 import { v4 as uuidv4 } from 'uuid';
+import dbClient from '../utils/db';
+import redisClient from '../utils/redis';
 
-// Import your User model and Redis client here
-import User from '../models/User'; // Replace with your actual User model import
-import redisClient from '../redis'; // Replace with your actual Redis client import
-
-// Define the AuthController object
+// Import your User model and Redis client her//
+Define the AuthController object
 const AuthController = {
   // Endpoint for user sign-in and token generation
   connect: async (req, res) => {
